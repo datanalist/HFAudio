@@ -1,21 +1,16 @@
 """
-
 Этот модуль позволяет создать произвольный аудио-датасет, отвечающий
 требованиям datasets.load_dataset и csv-file к нему
-
-Пример:
-    $ python example_google.py
-
-ЗАДАЧИ:
-    * Дописать модуль для запуск в CLI и импортирования
-
 """
 
 import os
+
 from typing import List, Dict
 from datasets import load_dataset
 from datasets import Dataset, Audio
 import pandas as pd
+
+import click
 
 
 def transform_folder_name(folder_name: str) -> str:
